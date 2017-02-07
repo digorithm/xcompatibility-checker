@@ -1,0 +1,41 @@
+{
+  "name": "xcompatibility-checker",
+  "version": "0.0.1",
+  "directories": {
+    "lib": "./lib",
+    "bin": "./bin",
+    "spec": "./spec"
+  },
+  "main": "./lib/index.js",
+  "author": "",
+  "engines": [
+    "node"
+  ],
+  "scripts": {
+    "test": "make test"
+  },
+  "description": "",
+  "keywords": [
+    "skeleton",
+    "mocha"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "eslint-config-airbnb": "^14.1.0",
+    "mocha": ">=1.7.4",
+    "optimist": ">=0.3.4",
+    "promise": "^7.1.1",
+    "prompt": "^1.0.0",
+    "prompt-sync": "^4.1.4",
+    "sinon": ">=1.6.0",
+    "underscore": ">=1.4.3"
+  },
+  "devDependencies": {
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb-base": "^11.1.0",
+    "eslint-plugin-import": "^2.2.0"
+  }
+}
