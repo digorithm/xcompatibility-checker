@@ -38,7 +38,7 @@ function printRelevantInformation(k, data) {
 function getKeywordsFromUser() {
   const shortText = prompt('Enter a short descriptive text for this keyword: ');
 
-  const keywords = prompt('Enter your keywords: ');
+  const keywords = prompt('Enter your keywords (separated by comma): ');
   let splittedKeywords = keywords.split(',');
 
   splittedKeywords = splittedKeywords.map(e => e.trim());
