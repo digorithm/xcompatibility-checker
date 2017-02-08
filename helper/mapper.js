@@ -21,7 +21,6 @@ const features = rawDb.data;
 
 const prompt = require('prompt-sync')();
 
-
 function isInArray(value, array) {
   return array.indexOf(value) > -1;
 }
@@ -51,6 +50,7 @@ function getKeywordsFromUser() {
 function saveToDisk(data) {
   fs.writeFileSync('db.json', JSON.stringify(data));
 }
+
 function startProcessing() {
   let alreadyProcessedKeys = [];
 
