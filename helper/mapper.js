@@ -51,6 +51,30 @@ function saveToDisk(data) {
   fs.writeFileSync('db.json', JSON.stringify(data));
 }
 
+function getFullySupportedBrowsers(stats) {
+  const BrowserSupportList = {};
+
+  Object.keys(stats).forEach((browser) => {
+    let ys = 0;
+    let notys = 0;
+    let total = 0;
+    Object.keys(stats[browser]).forEach((version) => {
+      if (stats[browser][version] === 'y') {
+        ys += 1;
+      } else {
+        notys += 1;
+      }
+      total += 1;
+    });
+    if (ys === total) {
+      BrowserSupportList[browser] = true;
+    } else {
+      BrowserSupportList[browser] = false;
+    }
+  });
+  return BrowserSupportList;
+}
+
 function startProcessing() {
   let alreadyProcessedKeys = [];
 
@@ -58,18 +82,24 @@ function startProcessing() {
 
   if (fs.existsSync('db.json')) {
     const db = JSON.parse(fs.readFileSync('db.json'));
-
     alreadyProcessedKeys = Object.keys(db);
-
     // if it exists, we continue the processing from where we stopped
     keywordTriggerMap = db;
   }
 
-  Object.keys(features).forEach((key) => {
-    if (!isInArray(key, alreadyProcessedKeys)) {
-      printRelevantInformation(key, features);
+  // Iterating over each feature
+  Object.keys(features).forEach((feature) => {
+    if (!isInArray(feature, alreadyProcessedKeys)) {
+      printRelevantInformation(feature, features);
 
-      keywordTriggerMap[key] = getKeywordsFromUser();
+      const supportedBrowsers = getFullySupportedBrowsers(features[feature].stats);
+
+      const FromUser = getKeywordsFromUser();
+
+      // Add fully supported browsers from a given feature
+      FromUser.fully_supported_browsers = supportedBrowsers;
+
+      keywordTriggerMap[feature] = FromUser;
 
       saveToDisk(keywordTriggerMap);
     }
