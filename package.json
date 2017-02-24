@@ -6,14 +6,15 @@
     "bin": "./bin",
     "spec": "./spec"
   },
-  "main": "./lib/index.js",
+  "main": "./lib/app.js",
   "author": "",
   "engines": [
     "node"
   ],
   "scripts": {
-    "test": "make test",
-    "debug": "node --nolazy --debug-brk=5858 bin/app.js"
+    "test": "mocha",
+    "debug": "node --nolazy --debug-brk=5858 bin/app.jsi",
+    "generate-docs": "jsdoc lib/xcc.js -t node_modules/minami/"
   },
   "description": "",
   "keywords": [
@@ -25,10 +26,13 @@
     "url": ""
   },
   "dependencies": {
+    "chai": "^3.5.0",
     "eslint-config-airbnb": "^14.1.0",
     "esprima": "^3.1.3",
+    "ink-docstrap": "^1.3.0",
     "jsdoc": "^3.4.3",
-    "mocha": ">=1.7.4",
+    "minami": "^1.1.1",
+    "mocha": "^3.2.0",
     "optimist": ">=0.3.4",
     "promise": "^7.1.1",
     "prompt": "^1.0.0",
