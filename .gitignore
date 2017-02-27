@@ -16,3 +16,8 @@ npm-debug.log
 node_modules
 .eslintrc.json
 .vscode/
+
+# git.config.json contains github access token.  If not ignored, access tokens will be invalidated form time to time
+git.config.json
+
+.idea/
