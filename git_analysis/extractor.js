@@ -18,7 +18,7 @@ const projects_file = 'git_projects.json';
 const projects = JSON.parse(fs.readFileSync(projects_file));
 
 function saveToDisk(data) {
-    fs.writeFileSync(projects_file, JSON.stringify(data));
+    fs.writeFileSync(projects_file, JSON.stringify(data, null, 4));
 }
 
 function yearsSince(lastCommitDate) {
