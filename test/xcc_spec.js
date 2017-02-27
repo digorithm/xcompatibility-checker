@@ -72,6 +72,16 @@ describe('Testing Xcc', function() {
       expect(parsedCode.length).to.equal(NumberOfKeywords);
 
     });
-  
+    
+    it('Parse codebase (many files containing code)', function() {
+      const x = new Xcc();
+      x.LoadDB();
+
+      files = ["cssfile.css", "htmlfile.html", "jsfile.js"];
+
+      x.CheckCodebaseCompatibility(files);
+
+    });
+
   });
 });
