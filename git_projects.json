@@ -4,335 +4,431 @@
         "description": "Mobile First Helpdesk Application",
         "git": "https://github.com/helpyio/helpy",
         "language": "Rails",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "helpy/app/assets/,helpy/app/themes/,helpy/lib/generators/theme/templates/,helpy/public/,helpy/vendor/assets/"
     },
     {
         "name": "Coderwall",
         "description": "Professional network for Software",
         "git": "https://github.com/coderwall/coderwall-legacy",
         "language": "Rails",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "coderwall-legacy/app/,coderwall-legacy/design-wip/,coderwall-legacy/public/,coderwall-legacy/vendor/"
     },
     {
         "name": "Sharetribe",
         "description": "A Marketplace Platform",
         "git": "https://github.com/sharetribe/sharetribe",
         "language": "Rails",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "sharetribe/app/assets/,sharetribe/client/,sharetribe/vendor/assets/"
     },
     {
         "name": "Spina",
         "description": "A beautiful CMS for Rails Developers",
         "git": "https://github.com/denkGroot/Spina",
         "language": "Rails",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "Spina/app/assets/,Spina/app/views/,Spina/vendor/assets/"
     },
     {
         "name": "Loomio",
         "description": "Make decisions together",
         "git": "https://github.com/loomio/loomio",
         "language": "Rails",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "loomio/app/assets/,loomio/profile.html,loomio/public/"
     },
     {
         "name": "Help",
         "description": "Small help request system",
         "git": "https://github.com/netguru/help",
         "language": "Rails",
-        "active": false
+        "active": false,
+        "hasFrontend": false,
+        "srcPath": ""
     },
     {
         "name": "OpenSourceBilling",
         "description": "Beautiful Simple Billing Software",
         "git": "https://github.com/cantino/huginn",
         "language": "Rails",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "huginn/public/,huginn/vendor/assets/"
     },
     {
         "name": "Hours",
         "description": "Time registration that doesn't suck",
         "git": "https://github.com/DefactoSoftware/Hours",
         "language": "Rails",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "Hours/app/assets/,Hours/public/"
     },
     {
         "name": "OpenProject",
         "description": "Project Management System",
         "git": "https://github.com/opf/openproject",
         "language": "Rails",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "openproject/app/assets/,openproject/frontend/app/,openproject/frontend/vendor/,openproject/public/"
     },
     {
         "name": "Huginn",
         "description": "Agent system that perform tasks online for you",
         "git": "https://github.com/cantino/huginn",
         "language": "Rails",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "huginn/public/,huginn/vendor/assets/"
     },
     {
         "name": "Discourse",
         "description": "A Platform for Community Discussion",
         "git": "https://github.com/discourse/discourse",
         "language": "Rails",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "discourse/app/assets/javascripts/,discourse/app/assets/stylesheets/,discourse/lib/highlight_js/assets/,discourse/public/,discourse/vendor/"
     },
     {
         "name": "Squash",
         "description": "Collection of tools that helps developers find and kill bugs",
         "git": "https://github.com/SquareSquash/web",
         "language": "Rails",
-        "active": false
+        "active": false,
+        "hasFrontend": false,
+        "srcPath": ""
     },
     {
         "name": "Eventx",
         "description": "Event Management System without Hassle",
         "git": "https://github.com/andela/eventx",
         "language": "Rails",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "eventx/app/assets/,eventx/public/"
     },
     {
         "name": "Fulcrum",
         "description": "Agile Project Management Tool",
         "git": "https://github.com/fulcrum-agile/fulcrum",
         "language": "Rails",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "fulcrum/app/assets/,fulcrum/public/,fulcrum/vendor/assets/"
     },
     {
         "name": "Spree",
         "description": "Ecommerce Solution",
         "git": "https://github.com/spree/spree",
         "language": "Rails",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "spree/core/vendor/assets/,spree/frontend/app/,spree/frontend/vendor/,spree/guides/assets/,spree/guides/content/,spree/guides/layouts/,spree/guides/static/"
     },
     {
         "name": "RedMine",
         "description": "Project Management Application",
         "git": "https://github.com/edavis10/redmine",
         "language": "Rails",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "redmine/extra/sample_plugin/assets/stylesheets/,redmine/public/"
     },
     {
         "name": "SprintApp",
         "description": "Time tracking and Project Management App",
         "git": "https://github.com/macfanatic/SprintApp",
         "language": "Rails",
-        "active": false
+        "active": false,
+        "hasFrontend": false,
+        "srcPath": ""
     },
     {
         "name": "Copycopter",
         "description": "A service for editing the copy text of a Rails application",
         "git": "https://github.com/copycopter/copycopter-server",
         "language": "Rails",
-        "active": false
+        "active": false,
+        "hasFrontend": false,
+        "srcPath": ""
     },
     {
         "name": "Shoop",
         "description": "E-commerce Platform",
         "git": "https://github.com/shuup/shuup",
         "language": "Django",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "shuup/doc/_theme/sphinx_shoop_theme/,shuup/shuup/admin/modules/orders/static_src/,shuup/shuup/admin/modules/products/static_src/,shuup/shuup/admin/static_src/base/js/,shuup/shuup/admin/static_src/contact_group/,shuup/shuup/admin/static_src/dashboard/,shuup/shuup/admin/static_src/picotable/,shuup/shuup/admin/static_src/product/,shuup/shuup/admin/static_src/vendor/,shuup/shuup/front/static_src/js/,shuup/shuup/notify/static/notify/admin/,shuup/shuup/xtheme/static_src/admin/js/"
     },
     {
         "name": "Codango",
         "description": "Social Network for Coders",
         "git": "https://github.com/andela/codango",
         "language": "Django",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "codango/codango/account/templates/account/,codango/codango/community/templates/community/,codango/codango/,pairprogram/templates/pairprogram/,codango/codango/resources/templates/emails/,codango/codango/,resources/templates/resources/,codango/codango/static/css/,codango/codango/static/js/,codango/codango/templates/admin/base_site.html,codango/codango/userprofile/templates/userprofile/"
     },
     {
         "name": "Django-CMS",
         "description": "Easy to use and developer friendly CMS",
         "git": "https://github.com/divio/django-cms",
         "language": "Django",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "django-cms/cms/static/,django-cms/cms/templates/,django-cms/menus/templates/"
     },
     {
         "name": "Django-fiber",
         "description": "A simple, user-friendly CMS for all your Django projects",
         "git": "https://github.com/ridethepony/django-fiber",
         "language": "Django",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "django-fiber/fiber/static/,django-fiber/fiber/templates/"
     },
     {
         "name": "Feincms",
         "description": "A Django-based CMS with a focus on extensibility and concise code",
         "git": "https://github.com/feincms/feincms",
         "language": "Django",
-        "active": true
+        "active": true,
+        "hasFrontend": false,
+        "srcPath": ""
     },
     {
         "name": "Mezzanine",
         "description": "CMS framework for Django",
         "git": "https://github.com/stephenmcd/mezzanine",
         "language": "Django",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "mezzanine/docs/mezzanine_theme/,mezzanine/mezzanine/accounts/templates/,mezzanine/mezzanine/blog/templates/,mezzanine/mezzanine/conf/static/,mezzanine/mezzanine/core/static/,mezzanine/mezzanine/core/templates/,mezzanine/mezzanine/forms/static/,mezzanine/mezzanine/forms/templates/,mezzanine/mezzanine/galleries/static/,mezzanine/mezzanine/galleries/templates/,mezzanine/mezzanine/generic/templates/,mezzanine/mezzanine/mobile/static/,mezzanine/mezzanine/mobile/templates/,mezzanine/mezzanine/pages/static/,mezzanine/mezzanine/pages/templates/,mezzanine/mezzanine/twitter/templates/"
     },
     {
         "name": "Wagtail",
         "description": "A Django content management system focused on flexibility and user experience",
         "git": "https://github.com/wagtail/wagtail",
         "language": "Django",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "wagtail/client/src/,wagtail/wagtail/contrib/modeladmin/templates/,wagtail/wagtail/contrib/settings/templates/,wagtail/wagtail/contrib/table_block/,wagtail/wagtail/contrib/wagtailsearchpromotions/,wagtail/wagtail/contrib/wagtailstyleguide/templates/,wagtail/wagtail/project_template/home/templates/,wagtail/wagtail/project_template/project_name/,wagtail/wagtail/project_template/search/templates/,wagtail/wagtail/wagtailadmin/static_src/,wagtail/wagtail/wagtailadmin/templates/,wagtail/wagtail/wagtailcore/templates/,wagtail/wagtail/wagtaildocs/static_src/,wagtail/wagtail/wagtaildocs/templates/,wagtail/wagtail/wagtailembeds/static_src/,wagtail/wagtail/wagtailembeds/templates/,wagtail/wagtail/wagtailforms/templates/,wagtail/wagtail/wagtailimages/static_src/,wagtail/wagtail/wagtailimages/templates/,wagtail/wagtail/wagtailredirects/templates/,wagtail/wagtail/wagtailsearch/templates/,wagtail/wagtail/wagtailsnippets/templates/,wagtail/wagtail/wagtailusers/templates/"
     },
     {
         "name": "Django-leonardo",
         "description": "CMS for everyone, easy to deploy and scale, robust modular system with many packages",
         "git": "https://github.com/django-leonardo/django-leonardo",
         "language": "Django",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "django-leonardo/leonardo/module/media/widget,django-leonardo/leonardo/module/devel/templates/,django-leonardo/leonardo/module/leonardo_auth/templates/,django-leonardo/leonardo/module/media/templates/admin/,django-leonardo/leonardo/module/media/templates/media/,django-leonardo/leonardo/module/media/templates/widget/,django-leonardo/leonardo/module/nav/,django-leonardo/leonardo/module/search/templates/,django-leonardo/leonardo/module/web/templates/base/,django-leonardo/leonardo/module/web/templates/widget/,django-leonardo/leonardo/static/,django-leonardo/leonardo/templates/"
     },
     {
         "name": "Rocket.Chat",
         "description": "A web chat platform",
         "git": "https://github.com/RocketChat/Rocket.Chat",
         "language": "",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "Rocket.Chat/client/,Rocket.Chat/lib/,Rocket.Chat/packages/"
     },
     {
         "name": "ColourCode",
         "description": "An online colour code app",
         "git": "https://github.com/tamino-martinius/colourco.de",
         "language": "",
-        "active": false
+        "active": false,
+        "hasFrontend": false,
+        "srcPath": ""
     },
     {
         "name": "ReactionCommerce",
         "description": "A JavaScript Ecommerce App",
         "git": "https://github.com/reactioncommerce/reaction",
         "language": "",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "reaction/client/,reaction/imports/plugins/core/accounts/client,reaction/imports/plugins/core/catalog/client,reaction/imports/plugins/core/checkout/client,reaction/imports/plugins/core/dashboard/client,reaction/imports/plugins/core/discounts/client,reaction/imports/plugins/core/email/client,reaction/imports/plugins/core/layout/client,reaction/imports/plugins/core/orders/client,reaction/imports/plugins/core/payments/client,reaction/imports/plugins/core/revisions/client,reaction/imports/plugins/core/shipping/client,reaction/imports/plugins/core/taxes/client,reaction/imports/plugins/core/templates/client,reaction/imports/plugins/core/ui/client,reaction/imports/plugins/core/ui-grid/client,reaction/imports/plugins/core/ui-navbar/client,reaction/imports/plugins/core/ui-tagnav/client,reaction/imports/plugins/included/analytics/client,reaction/imports/plugins/included/default-theme/client,reaction/imports/plugins/included/discount-codes/client,reaction/imports/plugins/included/inventory/client,reaction/imports/plugins/included/launchdock-connect/client,reaction/imports/plugins/included/notifications/client,reaction/imports/plugins/included/payments-authnet/client,reaction/imports/plugins/included/payments-braintree/client,reaction/imports/plugins/included/payments-example/client,reaction/imports/plugins/included/payments-paypal/client,reaction/imports/plugins/included/payments-stripe/client,reaction/imports/plugins/included/product-admin/client,reaction/imports/plugins/included/product-detail-simple/client,reaction/imports/plugins/included/product-variant/client,reaction/imports/plugins/included/search-mongo/client,reaction/imports/plugins/included/shipping-rates/client,reaction/imports/plugins/included/shippo/client,reaction/imports/plugins/included/sms/client,reaction/imports/plugins/included/social/client,reaction/imports/plugins/included/taxes-avalara/client,reaction/imports/plugins/included/ui-search/client"
     },
     {
         "name": "CoderMania",
         "description": "An E-Learning Platform",
         "git": "https://github.com/Elfoslav/codermania",
         "language": "",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "codermania/client/lib,codermania/client/styles,codermania/private/templates/,codermania/public/"
     },
     {
         "name": "Telescope",
         "description": "Lauch Sites Easily",
         "git": "https://github.com/TelescopeJS/Telescope",
         "language": "",
-        "active": true
+        "active": true,
+        "hasFrontend": false,
+        "srcPath": ""
     },
     {
         "name": "Loop Pulse",
         "description": "Data Analysis Platform",
         "git": "https://github.com/clionelabs/looppulse.web.manage",
         "language": "",
-        "active": false
+        "active": false,
+        "hasFrontend": false,
+        "srcPath": ""
     },
     {
         "name": "Wekan",
         "description": "The open-source Trello-like kanban",
         "git": "https://github.com/wekan/wekan",
         "language": "",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "wekan/client/"
     },
     {
         "name": "microapps-donation",
         "description": "A single page application that allows people to donate money",
         "git": "https://github.com/iamraphson/microapps-donation",
         "language": "ReactJS",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "microapps-donation/css/,microapps-donation/index.html,microapps-donation/js/,microapps-donation/src/components/"
     },
     {
         "name": "docue",
         "description": "Document Management System With React Frontend",
         "git": "https://github.com/kevgathuku/docue",
         "language": "ReactJS",
-        "active": true
+        "active": true,
+        "hasFrontend": false,
+        "srcPath": ""
     },
     {
         "name": "MERNMAP",
         "description": "An interactive map for MERN(MongoDB, ExpressJS, ReactJS, NodeJS) Stack Developers",
         "git": "https://github.com/iamraphson/mernmap",
         "language": "ReactJS",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "mernmap/public/,mernmap/src/components/"
     },
     {
         "name": "Cerebro",
         "description": "One-input productivity booster",
         "git": "https://github.com/KELiON/cerebro",
         "language": "ReactJS",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "cerebro/app/background/,cerebro/app/main/"
     },
     {
         "name": "Itsquiz-wall",
         "description": "Isomorphic Quiz Wall for itsquiz.com",
         "git": "https://github.com/WebbyLab/itsquiz-wall",
         "language": "ReactJS",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "itsquiz-wall/client/,itsquiz-wall/public/static/,itsquiz-wall/shared/"
     },
     {
         "name": "SoundRedux",
         "description": "SoundCloud Client Isomorphic Quiz Wall for itsquiz.com",
         "git": "https://github.com/andrewngu/sound-redux",
         "language": "ReactJS",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "sound-redux/scripts/components/"
     },
     {
         "name": "React-Powered",
         "description": "Hacker News Client",
         "git": "https://github.com/insin/react-hn",
         "language": "ReactJS",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "react-hn/public/"
     },
     {
         "name": "Calypso",
         "description": "The new JavaScript- and API-powered WordPress.com",
         "git": "https://github.com/Automattic/wp-calypso",
         "language": "ReactJS",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "wp-calypso/client/"
     },
     {
         "name": "Trello tribute",
         "description": "A clone of Trello with React and Phoenix",
         "git": "https://github.com/bigardone/phoenix-trello",
         "language": "ReactJS",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "phoenix-trello/web/static/"
     },
     {
         "name": "In-Browser Playground",
         "description": "A playground for in-browser interpreters",
         "git": "https://github.com/fatiherikli/fil",
         "language": "ReactJS",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "fil/app/components/,fil/index.html"
     },
     {
         "name": "Spectacle",
         "description": "A React library for Deck/Slide Presentations",
         "git": "https://github.com/FormidableLabs/spectacle",
         "language": "ReactJS",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "spectacle/index.html,spectacle/src/components/,spectacle/src/themes/"
     },
     {
         "name": "Kinematic",
         "description": "Visual Docker Container Management on Mac & Windows",
         "git": "https://github.com/docker/kitematic",
         "language": "ReactJS",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "kitematic/index.html,kitematic/src/components/"
     },
     {
         "name": "Perseus",
         "description": "Perseus is Khan Academy's new exercise question editor and renderer",
         "git": "https://github.com/Khan/perseus",
         "language": "ReactJS",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "perseus/index.html,perseus/stylesheets/"
     },
     {
         "name": "Favesound-redux",
         "description": "The SoundCloud Client in React + Redux made with passion!",
         "git": "https://github.com/rwieruch/favesound-redux",
         "language": "ReactJS",
-        "active": true
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "favesound-redux/src/components/,feincms/feincms/static/,feincms/feincms/templates/"
     },
     {
         "name": "",
         "description": "",
         "git": "",
         "language": "",
-        "active": false
+        "active": false,
+        "hasFrontend": false,
+        "srcPath": ""
     }
 ]
