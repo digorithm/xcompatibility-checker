@@ -8,6 +8,8 @@ lib-cov
 *.pid
 *.gz
 
+git_analysis/tmp/
+
 pids
 logs
 results
