@@ -1,5 +1,13 @@
-
 [
+    {
+        "name": "Loomio",
+        "description": "Make decisions together",
+        "git": "https://github.com/loomio/loomio",
+        "language": "Rails",
+        "active": true,
+        "hasFrontend": true,
+        "srcPath": "loomio/app/assets/,loomio/profile.html,loomio/public/"
+    },
     {
         "name": "Helpy",
         "description": "Mobile First Helpdesk Application",
@@ -35,15 +43,6 @@
         "active": true,
         "hasFrontend": true,
         "srcPath": "Spina/app/assets/,Spina/app/views/,Spina/vendor/assets/"
-    },
-    {
-        "name": "Loomio",
-        "description": "Make decisions together",
-        "git": "https://github.com/loomio/loomio",
-        "language": "Rails",
-        "active": true,
-        "hasFrontend": true,
-        "srcPath": "loomio/app/assets/,loomio/profile.html,loomio/public/"
     },
     {
         "name": "Help",
@@ -178,7 +177,7 @@
         "language": "Django",
         "active": true,
         "hasFrontend": true,
-        "srcPath": "codango/codango/account/templates/account/,codango/codango/community/templates/community/,codango/codango/,pairprogram/templates/pairprogram/,codango/codango/resources/templates/emails/,codango/codango/,resources/templates/resources/,codango/codango/static/css/,codango/codango/static/js/,codango/codango/templates/admin/base_site.html,codango/codango/userprofile/templates/userprofile/"
+        "srcPath": "codango/codango/account/templates/account/,codango/codango/community/templates/community/,codango/codango/pairprogram/templates/pairprogram/,codango/codango/resources/templates/emails/,codango/codango/resources/templates/resources/,codango/codango/static/css/,codango/codango/static/js/,codango/codango/templates/admin/base_site.html,codango/codango/userprofile/templates/userprofile/"
     },
     {
         "name": "Django-CMS",
