@@ -13,8 +13,8 @@
   ],
   "scripts": {
     "test": "mocha",
-    "debug": "node --nolazy --debug-brk=5858 bin/app.jsi",
-    "generate-docs": "jsdoc lib/xcc.js -t node_modules/minami/"
+    "debug": "node --nolazy --debug-brk=5858 bin/app.js",
+    "generate-docs": "jsdoc lib/XCompatibility.js -t node_modules/minami/"
   },
   "description": "",
   "keywords": [
