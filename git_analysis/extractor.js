@@ -110,6 +110,7 @@ function checkActiveProjects() {
 }
 
 function main() {
+    console.log('Checking active github repos ...');
     checkActiveProjects();
     console.log('Done');
     var active = projects.filter(function (git_project) {
