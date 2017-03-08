@@ -7,23 +7,21 @@
  - Go to your terminal, move to the root folder, run `node git_analysis/analyzer.js`
  */
 
+require('shelljs/global');
 const fs = require('fs');
 const Promise = require('promise');
 const Git = require("nodegit");
-
-const config = require('../git.config.json');
-
 const projects_file = 'git_projects.json';
 const tmp_dir = 'git_analysis/tmp';
-var projects = JSON.parse(fs.readFileSync(projects_file));
+const projects = JSON.parse(fs.readFileSync(projects_file));
 
 // FIXME remove this: it is here just to speed up tests.
-projects = projects.slice(0, 3);
+// projects = projects.slice(0, 10);
 
 
-function makeDir(dir_path) {
+function checkDir(dir_path) {
     if (!fs.existsSync(dir_path)){
-        fs.mkdirSync(dir_path);
+        throw 'No tmp dir defined';
     }
 }
 
@@ -35,52 +33,46 @@ function getGitRepositoryName(url) {
     return url.substring(idx + 1, url.length);
 }
 
-function getFrontendFilesFolders(paths) {
-    return paths.split(",");
+function getFilePath(file) {
+    return  tmp_dir + '/' + file;
 }
 
-function cloneRepos() {
-    console.log('Cloning repos...');
-    var promises = [];
-    var idx = 0;
-    projects.forEach(function (git_project) {
+function getFrontendFiles(paths) {
+    var files = [];
+    var files_folders = paths.split(",");
+    files_folders.forEach(function (file) {
+        if (file.endsWith('/')) {
+            var path = getFilePath(file.substr(0, file.length));
+            var jsFiles = find(path).filter(function(_file) { return _file.match(/\.js$/); });
+            var htmlFiles = find(path).filter(function(_file) { return _file.match(/\.html$/); });
+            var cssFiles = find(path).filter(function(_file) { return _file.match(/\.css$/); });
 
-        if (typeof git_project.active !== 'undefined' && git_project.active) {
-            var repo = getGitRepositoryName(git_project.git);
-            var path = tmp_dir + '/' + repo;
-            console.log('[' + idx + '] Cloning :: ' + repo);
-            var p = Git.Clone(git_project.git, path).then(function (result) {
-                console.log('>> successfully cloned :: ' + repo);
-            });
-
-            promises.push(p);
-            idx++;
+            files = files.concat(jsFiles);
+            files = files.concat(htmlFiles);
+            files = files.concat(cssFiles);
+        } else {
+            files.push(getFilePath(file));
         }
     });
 
-    Promise.all(promises).then(function() {
-        console.log('\nDone');
+    return files.filter(function (file) {
+        return file.match(/\.js$/) || file.match(/\.html$/) || file.match(/\.css$/);
     });
 }
 
-function getXcompatibility() {
+function checkXcompatibility() {
     console.log('\nMeasuring cross-browser compatibility...');
     var promises = [];
-    var idx = 0;
+    var idx = 1;
     projects.forEach(function (git_project) {
 
         if (typeof git_project.active !== 'undefined' && git_project.active && git_project.hasFrontend) {
             var repo = getGitRepositoryName(git_project.git);
-            var frontend = getFrontendFilesFolders(git_project.srcPath);
-
+            var frontend = getFrontendFiles(git_project.srcPath);
             console.log('[' + idx + '] Measuting xcompatibility of :: ' + repo);
+            console.log(frontend);
 
-            frontend.forEach(function (file) {
-                var path = tmp_dir + '/' + file;
-                console.log('   ' + path);
-
-            });
-
+            // TODO: call XCompatibility API with the frontend files as a parameter
 
             idx++;
         }
@@ -89,12 +81,10 @@ function getXcompatibility() {
     console.log('\nDone');
 }
 
-
 function main() {
     console.log('Cloning git repos and measuring xbrowser-compatibility ...');
-    makeDir(tmp_dir);
-    cloneRepos();
-    getXcompatibility();
+    checkDir(tmp_dir);
+    checkXcompatibility();
 }
 
 main();

@@ -40,12 +40,11 @@
     "mocha": "^3.2.0",
     "nodegit": "^0.17.0",
     "optimist": ">=0.3.4",
-    "progress": "^1.1.8",
     "promise": "^7.1.1",
-    "promise.bar": "^0.1.4",
     "prompt": "^1.0.0",
     "prompt-sync": "^4.1.4",
     "requests": "^0.1.7",
+    "shelljs": "^0.7.6",
     "sinon": ">=1.6.0",
     "underscore": "^1.8.3"
   },
