@@ -74,53 +74,59 @@ function getLastCommit(commits) {
     return undefined;
 }
 
-console.log(projects.length);
-console.log(config);
+function checkActiveProjects() {
+    var promises = [];
 
-
-var promises = [];
-
-projects.forEach(function (git_project) {
-    var repo = getGitRepository(git_project.git);
-
-    if (typeof git_project.active === 'undefined') {
-        var p = getCommits(repo).then(function (response) {
-            git_project.commits = response;
-        }).catch(function (err) {
-            console.log(err);
-        });
-
-        promises.push(p);
-    }
-});
-
-Promise.all(promises).then(function () {
     projects.forEach(function (git_project) {
-        if (typeof git_project.active === 'undefined'){
-            var last = getLastCommit(git_project.commits);
-            if (!_.isUndefined(last)){
-                var lastCommitDate = new Date(last.commit.author.date);
-                git_project.active = yearsSince(lastCommitDate) <= 1;
-            } else {
-                git_project.active = false;
-            }
-            delete git_project.commits;
+        var repo = getGitRepository(git_project.git);
+
+        if (typeof git_project.active === 'undefined') {
+            var p = getCommits(repo).then(function (response) {
+                git_project.commits = response;
+            }).catch(function (err) {
+                console.log(err);
+            });
+
+            promises.push(p);
         }
     });
 
-    saveToDisk(projects);
-});
+    Promise.all(promises).then(function () {
+        projects.forEach(function (git_project) {
+            if (typeof git_project.active === 'undefined'){
+                var last = getLastCommit(git_project.commits);
+                if (!_.isUndefined(last)){
+                    var lastCommitDate = new Date(last.commit.author.date);
+                    git_project.active = yearsSince(lastCommitDate) <= 1;
+                } else {
+                    git_project.active = false;
+                }
+                delete git_project.commits;
+            }
+        });
 
-console.log('Done');
-var active = projects.filter(function (git_project) {
-    return git_project.active == true;
-});
-var inactive = projects.filter(function (git_project) {
-    return git_project.active == false;
-});
+        saveToDisk(projects);
+    });
+}
 
-console.log('TOTAL :: ' + (active.length + inactive.length));
-console.log('>> Active :: ' + active.length);
-console.log('>> Inactive :: ' + inactive.length);
+function main() {
+    console.log('Checking active github repos ...');
+    checkActiveProjects();
+    console.log('Done');
+    var active = projects.filter(function (git_project) {
+        return git_project.active == true;
+    });
+    var inactive = projects.filter(function (git_project) {
+        return git_project.active == false;
+    });
+
+    console.log('TOTAL :: ' + (active.length + inactive.length));
+    console.log('>> Active :: ' + active.length);
+    console.log('>> Inactive :: ' + inactive.length);
+}
+
+main();
+
+
 
 
