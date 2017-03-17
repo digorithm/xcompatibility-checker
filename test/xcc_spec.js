@@ -95,7 +95,7 @@ describe('Testing XCompatibility', function() {
         const code = '<html> <body> <h1>My First Heading</h1> <article> hey </article> <p>My first paragraph. </p> </body> </html>';
 
         const compatibility = x.CheckHTMLCode(code);
-        expect(compatibility.overall_compatibility).to.equal(79);
+        expect(compatibility.overall_compatibility).to.equal(97.84);
       })
 
       it("Check simple CSS code", function () {
@@ -104,7 +104,7 @@ describe('Testing XCompatibility', function() {
 
         const code = 'body{padding-left:11em;font-family:Georgia, "Times New Roman", Times, serif;color:purple;background-color:#d8da3d}ul.navbar{ hyphens: none; list-style-type:none;padding:0;margin:0;position:absolute;top:2em;left:1em;width:9em}h1{font-family:Helvetica, Geneva, Arial, SunSans-Regular, sans-serif}ul.navbar li{background:white;margin:0.5em 0;padding:0.3em;border-right:1em solid black}ul.navbar a{text-decoration:none}a:link{color:blue}a:visited{color:purple}address{margin-top:1em;padding-top:1em;border-top:thin dotted}'
         const compatibility= x.CheckCSSCode(code);
-        expect(compatibility.overall_compatibility).to.equal(6.75);
+        expect(compatibility.overall_compatibility).to.equal(18.619999999999997);
       })
 
       it('Parse codebase (many files containing code)', function() {
@@ -116,10 +116,10 @@ describe('Testing XCompatibility', function() {
 
         const CodeCompatibility = x.CheckCodebase(files);
 
-        expect(CodeCompatibility.overall_compatibility).to.equal(6.75)
+        expect(CodeCompatibility.overall_compatibility).to.equal(18.619999999999997)
       });
 
-      it('Parse real codebase', function() {
+      it.only('Checking loomio codebase', function() {
         const x = new XCompatibility();
 
         x.LoadKeywordsMap();
@@ -143,13 +143,21 @@ describe('Testing XCompatibility', function() {
           return e;
         });
 
-        console.log(files);
-
         const CodeCompatibility = x.CheckCodebase(files);
 
-        expect(CodeCompatibility.overall_compatibility).to.equal(6.75)
+        expect(CodeCompatibility.overall_compatibility).to.equal(18.619999999999997)
       });
 
+      it('Checking troublesome file', function() {
+        const x = new XCompatibility();
+
+        x.LoadKeywordsMap();
+
+        const css_file = ["test/test_code/sharetribe/client/app/assets/styles/mixins.css"]
+
+        const CSSCompatibility = x.CheckCodebase(css_file);
+        console.log(CSSCompatibility);
+      });
     });
 
   });
