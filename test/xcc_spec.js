@@ -118,6 +118,38 @@ describe('Testing XCompatibility', function() {
 
         expect(CodeCompatibility.overall_compatibility).to.equal(6.75)
       });
+
+      it('Parse real codebase', function() {
+        const x = new XCompatibility();
+
+        x.LoadKeywordsMap();
+
+        const path = "test/test_code/loomio";
+
+        let files = ['/app/assets/javascripts/active_admin.js',
+        '/app/assets/javascripts/angular_ahoy.js',
+        '/app/assets/stylesheets/email.css',
+        '/app/assets/stylesheets/poll_mailer.css',
+        '/profile.html',
+        '/public/service-worker.js',
+        '/public/404.html',
+        '/public/422.html',
+        '/public/429.html',
+        '/public/500.html',
+        '/public/google2d27e29427405bf7.html']
+
+        files = files.map(function(e) {
+          e = path + e;
+          return e;
+        });
+
+        console.log(files);
+
+        const CodeCompatibility = x.CheckCodebase(files);
+
+        expect(CodeCompatibility.overall_compatibility).to.equal(6.75)
+      });
+
     });
 
   });
